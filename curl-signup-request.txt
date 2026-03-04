@@ -1,0 +1,13 @@
+# Copy this cURL command to test the signup endpoint
+
+curl -X POST http://localhost:8000/api/users/signup \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "Password123"
+  }'
+
+
+# PowerShell version (Windows)
+curl.exe -X POST http://localhost:8000/api/users/signup -H "Content-Type: application/json" -d "{\"name\": \"John Doe\", \"email\": \"john.doe@example.com\", \"password\": \"Password123\"}"

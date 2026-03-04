@@ -1,0 +1,15 @@
+# This is an example override file for GPU support
+# Copy this to docker-compose.override.yml and uncomment if you have NVIDIA GPU
+
+version: '3.8'
+
+services:
+  ollama:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
